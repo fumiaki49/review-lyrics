@@ -2,7 +2,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false, unique::true|
+|nickname|string|null:false|
 |e-mail|string|null:false, unique::true|
 
 ### Association
