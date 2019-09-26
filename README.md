@@ -16,7 +16,7 @@
 |singer|string|null:false|
 |lyric|text|null:false|
 |comment|text|null:false|
-|user_id|integer|null:false, foreign_key::true|
+|user_id|references|null:false, foreign_key::true|
 
 ### Association
 - belongs_to: user
@@ -25,7 +25,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
-|user_id|integer|null:false, foreign_key::true|
+|user_id|references|null:false, foreign_key::true|
 
 ### Association
 - belongs_to: user
