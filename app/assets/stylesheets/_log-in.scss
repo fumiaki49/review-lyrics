@@ -1,0 +1,33 @@
+.log-in__title {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: aquamarine;
+  color: rgb(14, 59, 14);
+}
+
+.log-in-field {
+  text-align: center;
+  height: 650px;
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 10px;
+  background-color: rgb(139, 177, 139);
+  & .field {
+    padding-top: 30px;
+    color: rgb(14, 59, 14);
+  }
+}
+
+.actions {
+  padding-top: 15px;
+}
+
+.footer {
+  height: 70px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
