@@ -1,4 +1,4 @@
-.log-in__title {
+.sign-up-title {
   height: 70px;
   line-height: 70px;
   text-align: center;
@@ -6,9 +6,9 @@
   margin: 0 auto;
   background-color: aquamarine;
   color: rgb(14, 59, 14);
-}
 
-.log-in-field {
+}
+.sign-up-field {
   text-align: center;
   height: 650px;
   width: 700px;
@@ -16,11 +16,18 @@
   padding-top: 10px;
   background-color: rgb(139, 177, 139);
   & .field {
+    width: 400px;
     padding-top: 30px;
     color: rgb(14, 59, 14);
-    &__input {
+    font-weight: bold;
+    display: inline-block;
+    & input {
       margin-top: 10px;
-      width: 400px;
+      width: 340px;
     }
   }
+}
+
+.actions {
+  padding-top: 15px;
 }
