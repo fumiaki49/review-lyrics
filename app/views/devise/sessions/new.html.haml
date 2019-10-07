@@ -2,11 +2,11 @@
 .log-in-field
   = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
     .field
-      = f.label :Email
+      = f.label "E-mail"
       %br/
       = f.email_field :email, autofocus: true, autocomplete: "email", required: "", class: "field__input"
     .field
-      = f.label :password
+      = f.label "パスワード"
       %br/
       = f.password_field :password, autocomplete: "current-password", required: "", class: "field__input"
     - if devise_mapping.rememberable?

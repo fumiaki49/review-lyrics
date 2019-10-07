@@ -1,9 +1,13 @@
-
 .side-body
   .side-body__user-icon
     -if current_user.image.url.present?
-      = image_tag(current_user.image.url, width: 150, height: 150)
+      = image_tag(current_user.image.url, width: 170, height: 150, class: "users-image")
     .side-body__user-icon__name
       = current_user.nickname
+
+  = link_to  mypages_users_path do
+    %button.default-btn__side マイページ
   = link_to destroy_user_session_path do
-    %button.default-btn ログアウト
+    %button.default-btn__side ログアウト
+  = link_to new_post_path do
+    %button.default-btn__side 投稿する

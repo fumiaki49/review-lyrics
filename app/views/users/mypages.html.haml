@@ -1,0 +1,22 @@
+%h1.app-title Review Lyric
+.side-body
+  .side-body__user-icon
+    -if current_user.image.url.present?
+      = image_tag(current_user.image.url, width: 170, height: 150, class: "users-image")
+    .side-body__user-icon__name
+      = current_user.nickname
+  = link_to top_pages_path do
+    %button.default-btn__side トップページ
+
+.mypage-container
+  .mypage-main
+    %ul.mypage-main__list
+      %li.users-postted 
+        =link_to "" do
+          %button.default-btn 投稿した歌詞
+      %li.users-favorit 
+        =link_to "" do
+          %button.default-btn お気に入り
+      %li.edit-user-info 
+        =link_to "" do
+          %button.default-btn ユーザー情報編集
