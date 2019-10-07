@@ -7,10 +7,13 @@ Rails.application.routes.draw do
 
   root 'top_pages#index'
 
-  resources :top_pages, only: [:indx] do
-    member do
-      get "index"
+  resources :top_pages
+  resources :users, only: [:mypages] do
+    collection do
+      get 'mypages'
     end
   end
+
+  resources :posts 
 
 end
