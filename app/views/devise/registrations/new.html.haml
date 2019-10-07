@@ -1,5 +1,4 @@
-%h1.app-title Review Lyric
-
+.app-title Review Lyric
 .sign-up-field
   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
     = render "devise/shared/error_messages", resource: resource
@@ -29,4 +28,7 @@
       %br/
       = f.password_field :password_confirmation, autocomplete: "new-password"
     .actions
-      = f.submit "Sign up", class: "default-btn"
+      = f.submit "登録する", class: "default-btn"
+
+    = link_to new_user_session_path do
+      %button.default-btn キャンセル
