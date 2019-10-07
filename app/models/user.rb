@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   mount_uploader :image, ImageUploader
   
+  has_many :posts
+  
   validates :password, presence: true, length: {in: 7..128}, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
 end
