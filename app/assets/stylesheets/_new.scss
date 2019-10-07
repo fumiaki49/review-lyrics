@@ -1,0 +1,36 @@
+.posts-info {
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  background-color: $deep-blue;
+  color: white;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.post-back {
+  height: 100%;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: $green-blue;
+}
+
+.field-post {
+  padding-top: 50px;
+  color: white;
+  &__input {
+    width: 500px;
+    margin-top: 20px;
+    text-align: center;
+    &__text {
+      margin-top: 20px;
+      width: 500px;
+      height: 100px;
+    }
+  }
+}
+
+.field-post label {
+  font-size: 20px;
+}

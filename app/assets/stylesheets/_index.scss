@@ -1,7 +1,10 @@
+
 .side-body{
+  box-sizing: border-box;
+  float: left;
   width: 300px;
-  height: 700px;
-  background-color: rgb(163, 255, 163);
+  height: 100%;
+  background-color: rgb(139, 177, 139);
   &__user-icon{
     // margin-top: 20px;
     // margin-left: 70px;
@@ -12,8 +15,11 @@
       padding-top: 10px;
       text-align: center;
       font-size: 20px;
-      color: rgb(231, 148, 127);
+      color: rgb(168, 49, 19);
     }
   }
 }
 
+.users-image{
+  border-radius: 1em;
+}

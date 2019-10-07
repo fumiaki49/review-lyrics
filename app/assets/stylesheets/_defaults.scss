@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 .default-btn {
   width: 300px;
   height: 35px;
@@ -5,4 +10,17 @@
   border-color: rgb(83, 221, 168);
   cursor: pointer;
   margin-top: 25px;
+  border-radius: 1em;
+  color: white;
+}
+
+.default-btn__side {
+  width: 250px;
+  height: 35px;
+  background-color: rgb(83, 221, 168);
+  border-color: rgb(83, 221, 168);
+  cursor: pointer;
+  margin-left: 20px;
+  margin-top: 25px;
+  border-radius: 1em;
 }
