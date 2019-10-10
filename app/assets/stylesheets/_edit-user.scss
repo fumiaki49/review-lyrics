@@ -1,0 +1,64 @@
+.edit-page-title {
+  text-align: center;
+  background-color: $deep-blue;
+  color: white;
+  font-size: 40px;
+  height: 80px;
+  line-height: 80px;
+  font-weight: lighter;
+}
+
+.edit-page {
+  background-color: #dbfddb;
+  padding-top: 30px;
+  height: 120%;
+
+}
+
+.edit-user-field {
+  text-align: center;
+  width: 700px;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(139, 177, 139);
+  border-radius: 1em;
+  & .field {
+    width: 400px;
+    padding-top: 30px;
+    color: rgb(14, 59, 14);
+    font-weight: bold;
+    display: inline-block;
+    &__check-user {
+      color: rgb(179, 45, 45);
+      font-weight: bold;
+      padding-top: 10px;
+    }
+    & input {
+      margin-top: 10px;
+      width: 340px;
+      border-radius: 1em;
+      text-align: center;
+    }
+  }
+}
+
+.delete-field {
+  margin-top: 25px;
+  &__text {
+    color: rgb(179, 45, 45);
+    font-weight: bold;
+  }
+}
+
+.delete-btn {
+  width: 300px;
+  height: 35px;
+  background-color: rgb(83, 221, 168);
+  border-color: rgb(83, 221, 168);
+  cursor: pointer;
+  margin-top: 25px;
+  border-radius: 1em;
+  color: white;
+  margin-bottom: 20px;
+}
