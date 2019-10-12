@@ -64,20 +64,24 @@
   color: white;
 }
 
-.good-btn {
+.good-count {
   width: 80px;
   height: 90px;
   margin-left: 10px;
   line-height: 90px;
   font-size: 20px;
+  color: red;
 }
+
 .details-btn {
   background-color: rgb(141, 141, 233);
   color: white;
   float: right;
   width: 80px;
   height: 90px;
+  cursor: pointer;
 }
+
 .users-image{
   border-radius: 1em;
 }

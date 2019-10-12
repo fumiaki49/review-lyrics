@@ -1,0 +1,51 @@
+.postted-user-name {
+  background-color: $deep-blue;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.details-main {
+  background-color: $soft-green;
+  height: 100%;
+  width: 100%;
+}
+
+.postted-details {
+  height: 100%;
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: $green-blue;
+  &__info {
+    color: white;
+    padding-top: 20px;
+    margin: 0 auto;
+    width: 300px;
+    &__title {
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      display: block;
+      color: rgb(13, 13, 180);
+      &__details {
+        font-size: 15px;
+        padding-top: 10px;
+        display: block;
+        border-top: dashed 1px white;
+      }
+    }
+  }
+}
+
+.good-btn button{
+  background-color: $green-blue;
+  border: $green-blue;
+  color: rgb(138, 68, 68);
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 70px;
+  height: 50px;
+}

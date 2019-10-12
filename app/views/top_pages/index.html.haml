@@ -19,8 +19,10 @@
               %label Lyric:
               %br/
               = post.lyric
-          .good-btn 
-            = fa_icon "heart-o"
+          .good-count
+            = fa_icon "heart"
+            = post.liked_users.count
+            
 
           = link_to details_post_path(post.id) do
             %button.details-btn 詳細

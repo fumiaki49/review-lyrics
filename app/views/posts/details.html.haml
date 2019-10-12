@@ -1,4 +1,38 @@
-= @post.singer
-= @post.song
-= @post.lyric
-= @post.comment
+.postted-user-name
+  = @user.nickname
+  さんの投稿
+.details-main
+  .postted-details
+    %table.postted-details__info
+      %th.postted-details__info__title Song
+      %td.postted-details__info__title__details
+        = @post.song
+
+      %th.postted-details__info__title Singer
+      %td.postted-details__info__title__details
+        = @post.singer
+
+      %th.postted-details__info__title Lyric
+      %td.postted-details__info__title__details
+        = @post.lyric
+
+      %th.postted-details__info__title Comment
+      %td.postted-details__info__title__details
+        = @post.comment
+
+
+    .good-btn
+      - if current_user.already_liked?(@post)
+        = button_to post_like_path(@post), method: :delete do
+          = fa_icon "heart"
+          .good-counter
+          = @post.likes.count
+      - else
+        = button_to post_likes_path(@post) do
+          = fa_icon "heart"
+          .good-counter
+            = @post.likes.count
+    
+    .back-btn
+      = link_to root_path do
+        %button.default-btn トップページに戻る
