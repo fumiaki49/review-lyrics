@@ -1,6 +1,7 @@
 class TopPagesController < ApplicationController
   def index
     @posts = Post.all.includes(:user)
+    @posts = Post.page(params[:page]).per(7).order(created_at: :desc)
   end
 
   private
