@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
+
   def new
     @post = Post.new
   end
@@ -8,6 +10,10 @@ class PostsController < ApplicationController
     if @post.save!
       redirect_to top_pages_path, notice: '投稿が完了しました。'
     end
+  end
+
+  def details
+    @post = Post.find_by(id: params[:id])
   end
 
   private
