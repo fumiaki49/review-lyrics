@@ -9,11 +9,11 @@
     .field
       = f.label "アイコン"
       %br/
-      = f.file_field :image
+      = f.file_field :image, required: ""
     .field
       = f.label "E-mail"
       %br/
-      = f.email_field :email, autofocus: true, autocomplete: "email"
+      = f.email_field :email, autofocus: true, autocomplete: "email", required: ""
     .field
       = f.label "パスワード"
       %br/
@@ -22,11 +22,11 @@
       -#   %em
       -#     (#{@minimum_password_length} characters minimum)
       %br/
-      = f.password_field :password, autocomplete: "new-password", placeholder: "７文字以上・英数混合", class: "rg-password"
+      = f.password_field :password, autocomplete: "new-password", placeholder: "７文字以上・英数混合", class: "rg-password", required: ""
     .field
       = f.label "パスワードの確認"
       %br/
-      = f.password_field :password_confirmation, autocomplete: "new-password"
+      = f.password_field :password_confirmation, autocomplete: "new-password", required: ""
     .actions
       = f.submit "登録する", class: "default-btn"
 
