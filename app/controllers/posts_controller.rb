@@ -14,6 +14,8 @@ class PostsController < ApplicationController
 
   def details
     @post = Post.find_by(id: params[:id])
+    @user = User.find_by(id: @post.user_id)
+    @like = Like.new
   end
 
   private
