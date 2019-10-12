@@ -1,25 +1,26 @@
 .posts-info
   投稿する歌詞の情報を入力てください
-.post-back
-  = form_for @post do |f|
-    .field-post
-      = f.label "Song"
-      %br/
-      = f.text_field :song, placeholder: "歌の名前を入力", class: "field-post__input",required: ""
-    .field-post
-      = f.label "singer"
-      %br/
-      = f.text_field :singer, placeholder: "歌手名を入力", class: "field-post__input",required: ""
-    .field-post
-      = f.label "lyric"
-      %br/
-      = f.text_area :lyric, placeholder: "あなたが気に入っている歌詞を入力してください", class: "field-post__input__text",required: ""
-    .field-post
-      = f.label "comment"
-      %br/
-      = f.text_area :comment, placeholder: "歌を初めて聴いた時の思い出など自身のエピソードを書きましょう！", class: "field-post__input__text",required: ""
+.new-main
+  .post-field
+    = form_for @post do |f|
+      .field-post
+        = f.label "Song"
+        %br/
+        = f.text_field :song, placeholder: "歌の名前を入力", class: "field-post__input",required: ""
+      .field-post
+        = f.label "singer"
+        %br/
+        = f.text_field :singer, placeholder: "歌手名を入力", class: "field-post__input",required: ""
+      .field-post
+        = f.label "lyric"
+        %br/
+        = f.text_area :lyric, placeholder: "あなたが気に入っている歌詞を入力してください", class: "field-post__input__text",required: ""
+      .field-post
+        = f.label "comment"
+        %br/
+        = f.text_area :comment, placeholder: "歌を初めて聴いた時の思い出など自身のエピソードを書きましょう！", class: "field-post__input__text",required: ""
 
-    %button.default-btn{type: "submit"} 投稿する
-    %br/
-    = link_to top_pages_path do
-      %button.default-btn キャンセル
+      %button.default-btn{type: "submit"} 投稿する
+      %br/
+      = link_to top_pages_path do
+        %button.default-btn キャンセル
