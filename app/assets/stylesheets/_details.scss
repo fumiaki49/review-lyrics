@@ -7,6 +7,12 @@
   line-height: 50px;
 }
 
+.created-date {
+  font-size: 15px;
+  color: white;
+  width: 155px;
+  padding: 10px 0 0 10px;
+}
 .details-main {
   background-color: $soft-green;
   height: 100%;
@@ -40,7 +46,19 @@
   }
 }
 
-.good-btn button{
+.good-field .good-btn{
+  background-color: $green-blue;
+  border: $green-blue;
+  color: rgb(138, 68, 68);
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 70px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.good-icon {
+  margin-top: 10px;
   background-color: $green-blue;
   border: $green-blue;
   color: rgb(138, 68, 68);
