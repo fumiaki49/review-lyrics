@@ -22,5 +22,4 @@
 
       %button.default-btn{type: "submit"} 投稿する
       %br/
-      = link_to top_pages_path do
-        %button.default-btn キャンセル
+      =button_to "キャンセル", "#",class: "default-btn", onclick: "history.back(); return false;"
