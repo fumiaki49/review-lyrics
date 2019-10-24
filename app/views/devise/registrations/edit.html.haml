@@ -40,7 +40,7 @@
       .actions
         = f.submit "変更する", class: "default-btn"
 
-      = link_to mypages_users_path do
+      = link_to mypages_user_path(current_user) do
         %button.default-btn マイページに戻る
 
     .delete-field

@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
   resources :top_pages
   resources :users, only: [:mypages] do
-    collection do
+    member do
       get 'mypages'
+      get 'my_post'
     end
   end
 
@@ -20,6 +21,5 @@ Rails.application.routes.draw do
       get 'details'
     end
   end
-
   
 end

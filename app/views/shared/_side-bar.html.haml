@@ -5,7 +5,7 @@
     .side-body__user-icon__name
       = current_user.nickname
 
-  = link_to  mypages_users_path do
+  = link_to  mypages_user_path(current_user) do
     %button.default-btn__side マイページ
   = link_to destroy_user_session_path do
     %button.default-btn__side ログアウト
