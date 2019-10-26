@@ -7,7 +7,7 @@
 
 ### Association
 - has_many: posts
-- has_many: messages
+- has_many: talks
 
 ## postsテーブル
 |Column|Type|Options|
@@ -21,7 +21,7 @@
 ### Association
 - belongs_to: user
 
-## messagesテーブル
+## talksテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text||
