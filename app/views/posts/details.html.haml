@@ -25,14 +25,22 @@
         = @post.comment
 
 
-    .good-field
-      - if user_signed_in? && @post.user_id == current_user.id 
-        = render "shared/good-icon"
-        %br/
-        = link_to post_path(@post), method: :delete do
-          %button.default-btn 削除
-      - else
-        = render "shared/good-function"
+    - if user_signed_in? && @post.user_id == current_user.id 
+      = render "shared/good-icon"
+      %br/
+      = link_to post_path(@post), method: :delete do
+        %button.delete-post 削除
+    - else
+      = render "shared/good-function"
+    
+    .talks-container
+      .talks-container__box
+        .talks-container__box__show
+          
+        .talks-container__box__show__field
+          = form_for [@post, @talk] do |t|
+            = t.text_field :body
+            = t.submit "送信"
     .back-btn
       = link_to root_path do
         %button.default-btn トップページに戻る
