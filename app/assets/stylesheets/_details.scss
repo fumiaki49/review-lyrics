@@ -46,6 +46,11 @@
   }
 }
 
+.good-field {
+  width: 300px;
+  margin: 0 auto;
+}
+
 .good-field .good-btn{
   background-color: $green-blue;
   border: $green-blue;
@@ -66,4 +71,17 @@
   justify-content: space-evenly;
   width: 70px;
   height: 50px;
+}
+
+.delete-post {
+  width: 48px;
+  height: 48px;
+  background-color: rgb(83, 221, 168);
+  border-color: rgb(83, 221, 168);
+  cursor: pointer;
+  border-radius: 3em;
+  color: white;
+  position: absolute;
+  top: 675px;
+  left: 945px;
 }

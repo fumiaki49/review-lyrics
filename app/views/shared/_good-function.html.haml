@@ -1,10 +1,11 @@
-- if current_user.already_liked?(@post)
-  = button_to post_like_path(@post), class: "good-btn", method: :delete do
-    = fa_icon "heart"
-    .good-counter
-      = @post.likes.count
-- else
-  = button_to post_likes_path(@post) do
-    = fa_icon "heart"
-    .good-counter
-      = @post.likes.count
+.good-field
+  - if current_user.already_liked?(@post)
+    = button_to post_like_path(@post), class: "good-btn", method: :delete do
+      = fa_icon "heart"
+      .good-counter
+        = @post.likes.count
+  - else
+    = button_to post_likes_path(@post), class: "good-btn" do
+      = fa_icon "heart"
+      .good-counter
+        = @post.likes.count
