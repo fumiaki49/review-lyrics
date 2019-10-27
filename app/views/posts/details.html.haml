@@ -43,7 +43,7 @@
               = f.body          
       .talks-container__show__box__name__message__field
         = form_for [@post, @talk] do |t|
-          = t.text_field :body, class: "input-default", required: ""
+          = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
           = t.submit "送信", class: "send-btn"
     .back-btn
       = link_to root_path do
