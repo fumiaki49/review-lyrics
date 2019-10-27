@@ -39,7 +39,7 @@
           
         .talks-container__box__show__field
           = form_for [@post, @talk] do |t|
-            = t.text_field :body
+            = t.text_field :body, required: ""
             = t.submit "送信"
     .back-btn
       = link_to root_path do

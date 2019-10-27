@@ -1,6 +1,7 @@
 class TalksController < ApplicationController
   def create
-    @talk = Talk.new(talk_params)
+    @post = Post.find(params[:post_id])
+    @talk = @post.talks.new(talk_params)
     @talk.user_id = current_user.id
     if @talk.save
       redirect_back(fallback_location: root_path)
