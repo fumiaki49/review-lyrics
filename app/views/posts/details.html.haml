@@ -34,13 +34,17 @@
       = render "shared/good-function"
     
     .talks-container
-      .talks-container__box
-        .talks-container__box__show
-          
-        .talks-container__box__show__field
-          = form_for [@post, @talk] do |t|
-            = t.text_field :body, required: ""
-            = t.submit "送信"
+      .talks-container__show
+        - @talks.each do |f|
+          %ul.talks-container__show__box
+            %li.talks-container__show__box__name
+              = f.user.nickname
+            %li.talks-container__show__box__name__message
+              = f.body          
+      .talks-container__show__box__name__message__field
+        = form_for [@post, @talk] do |t|
+          = t.text_field :body, class: "input-default", required: ""
+          = t.submit "送信", class: "send-btn"
     .back-btn
       = link_to root_path do
         %button.default-btn トップページに戻る
