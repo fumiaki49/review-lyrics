@@ -17,9 +17,10 @@ Rails.application.routes.draw do
 
   resources :posts do
     resources :likes, only: [:create, :destroy]
+    resources :talks, only: [:create, :destroy]
     member do
       get 'details'
     end
   end
-  
+
 end
