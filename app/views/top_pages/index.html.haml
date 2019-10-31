@@ -1,8 +1,7 @@
-.app-title Review Lyric
-= render "shared/side-bar"
-
+= render "shared/navbar"
 .main-container
   .postted-lyric
     .postted-lyric__list
       = render 'shared/list'
       = paginate @posts
+  = render "shared/post-btn"

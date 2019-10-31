@@ -1,20 +1,7 @@
-.app-title 投稿した歌詞一覧
-.side-body
-  .side-body__user-icon
-    -if current_user.image.url.present?
-      = image_tag(current_user.image.url, width: 170, height: 150, class: "users-image")
-    .side-body__user-icon__name
-      = current_user.nickname
-  = link_to top_pages_path do
-    %button.default-btn__side トップページ
-  = link_to  mypages_user_path(current_user) do
-    %button.default-btn__side マイページ
-  = link_to destroy_user_session_path do
-    %button.default-btn__side ログアウト
-  = link_to new_post_path do
-    %button.default-btn__side 投稿する
-
+.app-title 投稿一覧
 .main-container
   .postted-lyric
     .postted-lyric__list
       = render 'shared/list'
+= render "shared/post-btn"
+= render "shared/navbar"

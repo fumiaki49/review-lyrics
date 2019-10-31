@@ -1,17 +1,4 @@
-.app-title Review Lyric
-.side-body
-  .side-body__user-icon
-    -if current_user.image.url.present?
-      = image_tag(current_user.image.url, width: 170, height: 150, class: "users-image")
-    .side-body__user-icon__name
-      = current_user.nickname
-  = link_to top_pages_path do
-    %button.default-btn__side トップページ
-  = link_to destroy_user_session_path do
-    %button.default-btn__side ログアウト
-  = link_to new_post_path do
-    %button.default-btn__side 投稿する
-
+= render "shared/navbar"
 .mypage-container
   .mypage-main
     %ul.mypage-main__list
@@ -24,3 +11,4 @@
       %li.edit-user-info 
         =link_to edit_user_registration_path do
           %button.default-btn ユーザー情報編集
+= render "shared/post-btn"

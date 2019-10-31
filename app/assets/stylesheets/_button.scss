@@ -26,13 +26,13 @@
 .default-btn {
   width: 300px;
   height: 35px;
-  background-color: rgb(83, 221, 168);
-  border-color: rgb(83, 221, 168);
+  background-color: $blaun;
+  border-color: $blaun;
   cursor: pointer;
   margin-top: 25px;
   border-radius: 1em;
   color: white;
-  box-shadow: 2px 3px 3px #225529;
+  box-shadow: 2px 3px 3px $blaun;
 }
 
 .default-btn__side {
@@ -46,4 +46,16 @@
   border-radius: 1em;
   box-shadow: 2px 3px 3px #225529;
   color: white;
+}
+
+.post-btn {
+  font-size: 23px;
+  background-color: red;
+  color: white;
+  width: 130px;
+  height: 130px;
+  border-radius: 6em;
+  position: fixed;
+  top: 633px;
+  left: 1260px;
 }
