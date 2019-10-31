@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :ensurer_corrent_user, only: [:destroy]
+  protect_from_forgery except: :create
 
   def new
     @post = Post.new
