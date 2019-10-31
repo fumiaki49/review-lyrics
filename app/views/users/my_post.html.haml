@@ -7,6 +7,8 @@
       = current_user.nickname
   = link_to top_pages_path do
     %button.default-btn__side トップページ
+  = link_to  mypages_user_path(current_user) do
+    %button.default-btn__side マイページ
   = link_to destroy_user_session_path do
     %button.default-btn__side ログアウト
   = link_to new_post_path do

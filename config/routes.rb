@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     member do
       get 'mypages'
       get 'my_post'
+      get 'my_favorit'
     end
   end
 
