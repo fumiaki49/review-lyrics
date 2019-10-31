@@ -1,6 +1,9 @@
 .postted-user-name
-  = @user.nickname
-  さんの投稿
+  - if user_signed_in? && @post.user_id == current_user.id
+    あなたの投稿
+  - else
+    = @user.nickname
+    さんの投稿
 .details-main
   .postted-details
     .created-date
@@ -24,27 +27,27 @@
       %td.postted-details__info__title__details
         = @post.comment
 
-
-    - if user_signed_in? && @post.user_id == current_user.id 
-      = render "shared/good-icon"
-      %br/
-      = link_to post_path(@post), method: :delete do
-        %button.delete-post 削除
-    - else
-      = render "shared/good-function"
-    
-    .talks-container
-      .talks-container__show
-        - @talks.each do |f|
-          %ul.talks-container__show__box
-            %li.talks-container__show__box__name
-              = f.user.nickname
-            %li.talks-container__show__box__name__message
-              = f.body          
-      .talks-container__show__box__name__message__field
-        = form_for [@post, @talk] do |t|
-          = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
-          = t.submit "送信", class: "send-btn"
-    .back-btn
-      = link_to root_path do
-        %button.default-btn トップページに戻る
+    .postted-under
+      %ul.postted-under__label
+        - if user_signed_in? && @post.user_id == current_user.id 
+          %li
+            = link_to post_path(@post), method: :delete do
+              %button.delete-post 削除
+        - else
+          = render "shared/good-function"
+      
+      .talks-container
+        .talks-container__show
+          - @talks.each do |f|
+            %ul.talks-container__show__box
+              %li.talks-container__show__box__name
+                = f.user.nickname
+              %li.talks-container__show__box__name__message
+                = f.body
+        .talks-container__show__box__name__message__field
+          = form_for [@post, @talk] do |t|
+            = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
+            = t.submit "送信", class: "send-btn"
+      .back-btn
+        = link_to root_path do
+          %button.default-btn トップページに戻る

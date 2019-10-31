@@ -40,9 +40,6 @@
       .actions
         = f.submit "変更する", class: "default-btn"
 
-      = link_to mypages_user_path(current_user) do
-        %button.default-btn マイページに戻る
-
     .delete-field
       .delete-field__text 
         %label アカウントの削除
@@ -50,4 +47,7 @@
         %small アカウントを削除する場合は下の’削除する’を押してください
       .delete-field__btn 
         #{button_to "削除する", registration_path(resource_name), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "delete-btn"}
+
+    = link_to mypages_user_path(current_user) do
+      %button.default-btn マイページに戻る
 

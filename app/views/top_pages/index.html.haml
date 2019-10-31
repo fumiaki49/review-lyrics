@@ -4,27 +4,6 @@
 .main-container
   .postted-lyric
     .postted-lyric__list
-      -@posts.each do |post|
-        %ul.postted-lyric__list__label
-          .user-icon
-            %li.user-icon__image
-              = image_tag(post.user.image.url, width: 50, height: 50)
-            %li.user-icon__name
-              = post.user.nickname
-          .postted-lyric__list__label__song
-            %label Song:
-            = post.song
-            %br/
-            .postted-lyric__list__label__song__lyric
-              %label Lyric:
-              %br/
-              = post.lyric
-          .good-count
-            = fa_icon "heart"
-            = post.liked_users.count
-            
-
-          = link_to details_post_path(post.id) do
-            %button.details-btn 詳細
-      
-      = paginate @posts
+      = render 'shared/list'
+      .pagination
+        = paginate @posts

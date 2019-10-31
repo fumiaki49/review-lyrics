@@ -1,27 +1,18 @@
 .app-title 投稿した歌詞一覧
-= render "shared/side-bar"
+.side-body
+  .side-body__user-icon
+    -if current_user.image.url.present?
+      = image_tag(current_user.image.url, width: 170, height: 150, class: "users-image")
+    .side-body__user-icon__name
+      = current_user.nickname
+  = link_to top_pages_path do
+    %button.default-btn__side トップページ
+  = link_to destroy_user_session_path do
+    %button.default-btn__side ログアウト
+  = link_to new_post_path do
+    %button.default-btn__side 投稿する
+
 .main-container
   .postted-lyric
     .postted-lyric__list
-      - @posts.each do |p|
-        %ul.postted-lyric__list__label
-          .user-icon
-            %li.user-icon__image
-              = image_tag(p.user.image.url, width: 50, height: 50)
-            %li.user-icon__name
-              = p.user.nickname
-          .postted-lyric__list__label__song
-            %label Song:
-            = p.song
-            %br/
-            .postted-lyric__list__label__song__lyric
-              %label Lyric:
-              %br/
-              = p.lyric
-          .good-count
-            = fa_icon "heart"
-            = p.liked_users.count
-                  
-
-          = link_to details_post_path(p.id) do
-            %button.details-btn 詳細
+      = render 'shared/list'

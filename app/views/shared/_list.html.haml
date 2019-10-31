@@ -1,0 +1,23 @@
+-@posts.each do |p|
+  %ul.postted-lyric__list__label
+    .user-icon
+      %li.user-icon__image
+        = image_tag(p.user.image.url, width: 50, height: 50)
+      %li.user-icon__name
+        = p.user.nickname
+    .postted-lyric__list__label__song
+      %label.show-title Song:
+      = p.song
+      %br/
+      %ul.postted-lyric__list__label__song__lyric
+        %li.show-lyric 
+          Lyric:
+        %li
+          = p.lyric
+    .good-count
+      = fa_icon "heart"
+      = p.liked_users.count
+            
+
+    = link_to details_post_path(p.id) do
+      %button.details-btn 詳細
