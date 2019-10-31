@@ -31,8 +31,9 @@
       %ul.postted-under__label
         - if user_signed_in? && @post.user_id == current_user.id 
           %li
-            = link_to post_path(@post), method: :delete do
-              %button.delete-post 削除
+            -# = link_to post_path(@post), method: :delete do
+            -#   %button.delete-post 削除
+            #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "delete-post"}
         - else
           = render "shared/good-function"
       
