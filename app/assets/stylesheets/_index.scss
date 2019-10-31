@@ -34,10 +34,12 @@
   &__list {
     height: 100%;
     overflow: scroll;
+    padding-top: 40px;
     &__label {
       list-style: none;
       margin-left: 50px; 
-      width: 960px;
+      width: 930px;
+      height: 113px;
       background-color: white;
       color: rgb(109, 106, 106);
       display: flex;
@@ -48,11 +50,10 @@
         width: 700px;
         border-right: dashed 1px rgb(109, 106, 106);
         &__lyric {
-          width: 690px;
+          width: 679px;
           margin-top: 10px;
           padding-top: 10px;
           padding-left: 0;
-          height: 54px;
           border-top: dashed 1px rgb(109, 106, 106);
           list-style: none;
           display: inline-flex;
@@ -72,8 +73,8 @@
   padding-right: 13px;
 }
 .user-icon {
-  width: 70px;
-  height: 91px;
+  width: 83px;
+  height: 113px;
   text-align: center;
   padding: 5px 5px;
   background-color: rgb(45, 120, 182);
@@ -93,8 +94,8 @@
   background-color: rgb(141, 141, 233);
   color: white;
   float: right;
-  width: 80px;
-  height: 101px;
+  width: 83px;
+  height: 113px;
   cursor: pointer;
 }
 
