@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def mypages
+    
   end
 
   def my_post

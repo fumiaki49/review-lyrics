@@ -1,7 +1,21 @@
 .mypage-container {
   height: 100%;
   background-color: #e0d4c4;
+  &__user-info {
+    list-style: none;
+    display: inline-flex;
+    padding-top: 33px;
+    &__name {
+      padding-top: 177px;
+      padding-left: 55px;
+      font-size: 33px;
+      color: $blaun;
+      border-bottom: ridge 3px $blaun;
+      font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+    }
+  }
 }
+
 .mypage-main {
   display: block;
   width: 100%;
@@ -9,7 +23,7 @@
   padding-top: 30px;
   background-color: $soft-blaun;
   position: absolute;
-  top: 233px;
+  top: 399px;
   &__list {
     width: 100%;
     list-style: none;
@@ -22,4 +36,12 @@
       padding-left: 250px;
     }
   }
+}
+
+
+.mypage-icon {
+  border: solid 3px $blaun;
+  border-radius: 7em;
+  width: 210px;
+  height: 210px;
 }

@@ -1,5 +1,12 @@
 = render "shared/navbar"
 .mypage-container
+  %ul.mypage-container__user-info
+    -if current_user.image.url.present?
+      %li.mypage-container__user-info
+        = image_tag(current_user.image.url, class: "mypage-icon")
+      %li.mypage-container__user-info__name
+        = current_user.nickname
+
   .mypage-main
     %ul.mypage-main__list
       %li.users-postted 
