@@ -1,5 +1,7 @@
-.app-title お気に入り一覧
-
+= render "shared/navbar"
+.list-favorit 
+  .list-favorit__tag
+    お気に入り
 .main-container
   .postted-lyric
     .postted-lyric__list
@@ -27,4 +29,3 @@
           = link_to details_post_path(l.id) do
             %button.details-btn 詳細
 = render "shared/post-btn"
-= render "shared/navbar"
