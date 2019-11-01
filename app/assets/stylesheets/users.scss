@@ -12,3 +12,18 @@
     height: 250px;
   }
 }
+
+.list-post {
+  background-color: $thin-blaun;
+  color: $deep-blue;
+  font-size: 33px;
+  position: absolute;
+  top: 99px;
+  left: 33px;
+  &__tag {
+    background-color: $blaun;
+    color: white;
+    width: 40px;
+    height: 403px;
+  }
+}
