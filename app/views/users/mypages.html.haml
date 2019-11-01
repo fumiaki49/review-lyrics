@@ -4,11 +4,11 @@
     %ul.mypage-main__list
       %li.users-postted 
         =link_to my_post_user_path(current_user) do
-          %button.default-btn 投稿した歌詞
+          %button.mypage-btn 投稿した歌詞
       %li.users-favorit 
         =link_to my_favorit_user_path(current_user) do
-          %button.default-btn お気に入り
+          %button.mypage-btn お気に入り
       %li.edit-user-info 
         =link_to edit_user_registration_path do
-          %button.default-btn ユーザー情報編集
+          %button.mypage-btn アカウント編集
 = render "shared/post-btn"
