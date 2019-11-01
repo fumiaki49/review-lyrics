@@ -9,8 +9,8 @@
 }
 
 .edit-page {
-  background-color: #dbfddb;
-  height: 100%;
+  background-color: $thin-blaun;
+  height: 120%;
 }
 
 .edit-user-field {
@@ -18,11 +18,11 @@
   height: 100%;
   width: 700px;
   margin: 0 auto;
-  background-color: rgb(139, 177, 139);
+  background-color: $soft-blaun;
   & .field {
     width: 400px;
     padding-top: 30px;
-    color: rgb(14, 59, 14);
+    color: $blaun;
     font-weight: bold;
     display: inline-block;
     &__check-user {
