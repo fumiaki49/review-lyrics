@@ -10,14 +10,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save!
-      redirect_to top_pages_path, notice: '投稿が完了しました。'
+      redirect_to top_pages_path, success: '投稿が完了しました。'
     end
   end
 
   def destroy
     if @post.destroy
-      redirect_to my_post_user_path(current_user.id)
-      flash[:notice] = "投稿を削除しました"
+      redirect_to my_post_user_path(current_user.id), success: "投稿を削除しました"
     end
   end
 
