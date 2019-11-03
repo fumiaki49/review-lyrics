@@ -47,8 +47,14 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: review-lyrics_production
+#   username: review-lyrics
+#   password: <%= ENV['REVIEW-LYRICS_DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: review-lyrics_production
-  username: review-lyrics
-  password: <%= ENV['REVIEW-LYRICS_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
