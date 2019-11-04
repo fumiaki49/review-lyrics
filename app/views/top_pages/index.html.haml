@@ -1,7 +1,18 @@
 = render "shared/navbar"
+.all-lyric 
+  .all-lyric__tag
+    全投稿一覧
 .main-container
   .postted-lyric
     .postted-lyric__list
-      = render 'shared/list'
-      = paginate @posts
+      - if @posts.blank?
+        .info
+          .info__top 
+            現在の投稿はありません
+          .info__top__bottom
+            ”投稿する”から投稿しましょう！
+      -else 
+        = render 'shared/list'
+        = paginate @posts
+
   = render "shared/post-btn"
