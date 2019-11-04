@@ -51,6 +51,7 @@
 .post-btn {
   font-size: 23px;
   background-color: red;
+  border-color: red;
   color: white;
   width: 130px;
   height: 130px;
@@ -58,13 +59,16 @@
   position: fixed;
   top: 633px;
   left: 1260px;
+  box-shadow: 2px 3px 3px rgb(88, 63, 63);
 }
 
 .mypage-btn {
   font-size: 23px;
   background-color: rgba(165, 86, 11, 0.74);
+  border-color: rgba(165, 86, 11, 0.74);
   color: white;
   width: 150px;
   height: 150px;
   border-radius: 6em;
+  box-shadow: 4px 5px 3px rgb(90, 66, 46);
 }
