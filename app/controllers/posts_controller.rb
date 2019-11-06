@@ -14,6 +14,16 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find_by(id: params[:id])
+  end
+
+  def update 
+    @post = Post.find_by(id: params[:id])
+    @post.update(update_post_params)
+    redirect_to details_post_path, success: "編集が完了しました"
+  end
+
   def destroy
     if @post.destroy
       redirect_to my_post_user_path(current_user.id), success: "投稿を削除しました"
@@ -32,6 +42,10 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:id, :song, :singer, :lyric, :comment).merge(user_id: current_user.id)
+  end
+
+  def update_post_params
+    params.require(:post).permit(:id, :song, :singer, :lyric, :comment)
   end
 
   def ensurer_corrent_user

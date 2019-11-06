@@ -31,24 +31,26 @@
       %ul.postted-under__label
         - if user_signed_in? && @post.user_id == current_user.id 
           %li
-            -# = link_to post_path(@post), method: :delete do
-            -#   %button.delete-post 削除
-            #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "delete-post"}
+            -# #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "delete-post"}
+            = link_to edit_post_path do
+              %button.edit-btn 編集
         - else
           = render "shared/good-function"
       
       .talks-container
         .talks-container__show
           - @talks.each do |f|
-            %ul.talks-container__show__box
-              %li.talks-container__show__box__name
+            .talks-label
+              .talks-label__icon
+                = image_tag(f.user.image.url, width: 50, height: 50)
                 = f.user.nickname
-              %li.talks-container__show__box__name__message
-                = f.body
-        .talks-container__show__box__name__message__field
+              .talks-label__icon__message
+                .talks-label__icon__message__says
+                  = f.body
+        .talks-container__show__field
           = form_for [@post, @talk] do |t|
             = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
             = t.submit "送信", class: "send-btn"
-      .back-btn
-        = link_to root_path do
-          %button.default-btn トップページに戻る
+
+    = link_to root_path do
+      %button.details-page_back-btn トップページに戻る

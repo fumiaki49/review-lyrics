@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     resources :talks, only: [:create, :destroy]
     member do
       get 'details'
+      get 'edit-post'
     end
   end
 
