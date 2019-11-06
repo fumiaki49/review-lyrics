@@ -45,6 +45,8 @@ background-color: $thin-blaun;
       color: rgb(109, 106, 106);
       display: flex;
       padding-left: 0px;
+      overflow: hidden;
+
       &__song {
         padding-left: 20px;
         padding-top: 8px;

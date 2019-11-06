@@ -14,17 +14,17 @@
   padding: 10px 0 0 10px;
 }
 .details-main {
-  background-color: $soft-green;
-  height: 110%;
+  background-color: $thin-blaun;
+  height: 120%;
   width: 100%;
 }
 
 .postted-details {
   height: 100%;
-  width: 700px;
+  width: 1100px;
   margin: 0 auto;
   text-align: center;
-  background-color: $green-blue;
+  background-color: $soft-blaun;
   &__info {
     color: white;
     padding-top: 20px;
@@ -35,12 +35,13 @@
       padding-bottom: 10px;
       font-size: 20px;
       display: block;
-      color: rgb(13, 13, 180);
+      color: $blaun;
       &__details {
         font-size: 15px;
         padding-top: 10px;
         display: block;
         border-top: dashed 1px white;
+        width: 700px;
       }
     }
   }
@@ -92,29 +93,54 @@
 .talks-container {
   margin: 0 auto;
   margin-top: 40px;
-  width: 600px;
+  width: 800px;
   height: 250px;
+  text-align: right;
+
   &__show {
     width: 100%;
-    height: 80%;
-    background-color: #e4f8e4;
+    height: 100%;
+    background-color: rgba(243, 180, 129, 0.959);
     overflow: scroll;
-    &__box {
+    &__field {
       width: 100%;
-      list-style: none;
-      display: inline-flex;
-      &__name {
-        margin: 5px 5px;
-        font-size: 10px;
-        &__message {
-          margin: 5px 5px 5px 80px;
-          &__field {
-            width: 100%;
-            height: 20%;
-            background-color: $green-blue;
-          }
-        }
+      height: 20%;
+      background-color: $soft-blaun;
+    }
+  }
+}
+
+.talks-label {
+  width: 100%;
+  list-style: none;
+  display: inline-flex;
+  float: left;
+  text-align: left;
+  margin: 5px 5px;
+  &__icon {
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    &__message {
+      width: 100%;
+      &__says {
+        display: inline-block;
+        position: relative; 
+        margin: 5px 0 0 30px;
+        padding: 17px 13px;
+        border-radius: 12px;
+        background: white;
       }
     }
   }
+}
+
+.talks-label__icon__message__says:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 18px; 
+  left: -24px;
+  border: 12px solid transparent;
+  border-right: 12px solid white;
 }
