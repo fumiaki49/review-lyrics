@@ -61,7 +61,7 @@
   box-shadow: 4px 5px 3px rgb(90, 66, 46);
 }
 
-.edit-btn {
+.detail-page-btn {
   width: 70px;
   height: 70px;
   background-color: $blaun;
@@ -70,10 +70,8 @@
   margin-top: 25px;
   color: white;
   box-shadow: 2px 3px 3px $blaun;
-  position: absolute;
-  top: 50px;
-  left: 1125px;
 }
+
 .edit-page-btn {
   width: 100px;
   height: 50px;
@@ -107,4 +105,30 @@
   color: white;
   float: left;
   margin-top: 5px;
+}
+
+.good-field .good-btn{
+  width: 70px;
+  height: 70px;
+  background-color: $blaun;
+  border-color: $blaun;
+  cursor: pointer;
+  margin-top: 25px;
+  color: white;
+  box-shadow: 2px 3px 3px $blaun;
+  display: inline-flex;
+  & i , .good-counter{
+    line-height: 70px;
+    padding-left: 10px;
+  }
+}
+
+
+.good-icon {
+  margin-top: 10px;
+  color: white;
+  display: inline-flex;
+  justify-content: space-evenly;
+  width: 70px;
+  padding-top: 3px;
 }

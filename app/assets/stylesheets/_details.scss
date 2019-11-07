@@ -58,45 +58,15 @@
     }
   }
 }
-.good-field {
-  position: absolute;
-  top: 80px;
-  left: 1125px;
-}
 
-.good-field .good-btn{
-  width: 70px;
-  height: 70px;
-  background-color: $blaun;
-  border-color: $blaun;
-  cursor: pointer;
-  margin-top: 25px;
-  color: white;
-  box-shadow: 2px 3px 3px $blaun;
-  display: inline-flex;
-  & i , .good-counter{
-    line-height: 70px;
-    padding-left: 10px;
-  }
-}
-
-
-.good-icon {
-  margin-top: 10px;
-  color: white;
-  display: inline-flex;
-  justify-content: space-evenly;
-  width: 70px;
-  padding-top: 3px;
-}
 
 
 
 .talks-container {
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 125px;
   width: 800px;
-  height: 300px;
+  height: 350px;
   text-align: right;
   &__show {
     width: 100%;
@@ -144,4 +114,11 @@
   left: -24px;
   border: 12px solid transparent;
   border-right: 12px solid white;
+}
+
+.detail-page-buttons {
+  list-style: none;
+  position: absolute;
+  top: 950px;
+  left: 1250px;
 }
