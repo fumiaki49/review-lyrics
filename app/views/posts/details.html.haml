@@ -28,12 +28,10 @@
         = @post.comment
 
     .postted-under
-      %ul.postted-under__label
+      .postted-under__label
         - if user_signed_in? && @post.user_id == current_user.id 
-          %li
-            -# #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "delete-post"}
-            = link_to edit_post_path do
-              %button.edit-btn 編集
+          = link_to edit_post_path do
+            %button.edit-btn 編集
         - else
           = render "shared/good-function"
       

@@ -62,15 +62,17 @@
 }
 
 .edit-btn {
-  width: 125px;
-  height: 35px;
+  width: 70px;
+  height: 70px;
   background-color: $blaun;
   border-color: $blaun;
   cursor: pointer;
   margin-top: 25px;
-  border-radius: 1em;
   color: white;
   box-shadow: 2px 3px 3px $blaun;
+  position: absolute;
+  top: 50px;
+  left: 1125px;
 }
 .edit-page-btn {
   width: 100px;
@@ -79,7 +81,6 @@
   border-color: $blaun;
   cursor: pointer;
   margin-top: 60px;
-  border-radius: 3em;
   color: white;
   box-shadow: 2px 3px 3px $blaun;
   margin-right: 20px;
@@ -97,4 +98,13 @@
   position: absolute;
   top: 1125px;
   left: 570px;
+}
+
+.send-btn {
+  width: 55px;
+  height: 40px;
+  background-color: #8b6317;
+  color: white;
+  float: left;
+  margin-top: 5px;
 }
