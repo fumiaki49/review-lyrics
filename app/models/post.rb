@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :liked_users, through: :likes, source: :user
 
-  validates :lyric,    length: { in: 1..200 } 
-  validates :comment,  length: { in: 1..200 }
+  validates :song, presence: true, length: { maximum: 40 }
+  validates :singer, presence: true, length: { maximum: 20 }
+  validates :lyric, presence: true,   length: { maximum: 200 } 
+  validates :comment,  presence: true, length: { maximum: 200 }
 end
