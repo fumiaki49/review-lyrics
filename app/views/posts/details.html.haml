@@ -21,34 +21,43 @@
 
       %th.postted-details__info__title Lyric
       %td.postted-details__info__title__details
-        = @post.lyric
+        .postted-details__info__title__details__text
+          = @post.lyric
 
       %th.postted-details__info__title Comment
       %td.postted-details__info__title__details
-        = @post.comment
+        .postted-details__info__title__details__text
+          = @post.comment
+    .talks-container
+      .talks-container__show
+        - @talks.each do |f|
+          .talks-label
+            .talks-label__icon
+              = image_tag(f.user.image.url, width: 50, height: 50)
+              = f.user.nickname
+            .talks-label__icon__message
+              .talks-label__icon__message__says
+                = f.body
+      .talks-container__show__field
+        = form_for [@post, @talk] do |t|
+          = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
+          = t.submit "送信", class: "send-btn"
 
     .postted-under
       .postted-under__label
         - if user_signed_in? && @post.user_id == current_user.id 
-          = link_to edit_post_path do
-            %button.edit-btn 編集
+          %ul.detail-page-buttons
+            %li.detail-page-buttons__btn
+              = link_to edit_post_path do
+                %button.detail-page-btn 編集
+            %li.detail-page-buttons__btn
+              =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
         - else
-          = render "shared/good-function"
+          %ul.detail-page-buttons
+            %li.detail-page-buttons__btn
+              = render "shared/good-function"
+            %li.detail-page-buttons__btn
+              = link_to root_path do
+                =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
       
-      .talks-container
-        .talks-container__show
-          - @talks.each do |f|
-            .talks-label
-              .talks-label__icon
-                = image_tag(f.user.image.url, width: 50, height: 50)
-                = f.user.nickname
-              .talks-label__icon__message
-                .talks-label__icon__message__says
-                  = f.body
-        .talks-container__show__field
-          = form_for [@post, @talk] do |t|
-            = t.text_field :body, class: "input-default", required: "", placeholder: "コメントを送信しましょう！"
-            = t.submit "送信", class: "send-btn"
 
-    = link_to root_path do
-      %button.details-page_back-btn トップページに戻る

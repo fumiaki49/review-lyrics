@@ -42,6 +42,9 @@
         display: block;
         border-top: dashed 1px white;
         width: 700px;
+        &__text {
+          text-align: left;
+        } 
       }
     }
   }
