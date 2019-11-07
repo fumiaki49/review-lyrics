@@ -15,11 +15,11 @@
       .field-post
         = f.label "lyric"
         %br/
-        = f.text_area :lyric, placeholder: "あなたが気に入っている歌詞を入力してください(200文字以内)", class: "field-post__input__text",required: ""
+        = f.text_area :lyric, placeholder: "あなたが気に入っている歌詞を入力してください(200文字以内)", maxlength: "200", row: "7", class: "field-post__input__text",required: ""
       .field-post
         = f.label "comment"
         %br/
-        = f.text_area :comment, placeholder: "歌を初めて聴いた時の思い出など自身のエピソードを書きましょう！(200文字以内)", class: "field-post__input__text",required: ""
+        = f.text_area :comment, placeholder: "歌を初めて聴いた時の思い出など自身のエピソードを書きましょう！(200文字以内)", maxlength: "200", row: "7",class: "field-post__input__text",required: ""
 
       %button.default-btn{type: "submit"} 投稿する
       %br/
