@@ -9,8 +9,10 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    if @post.save!
+    if @post.save
       redirect_to top_pages_path, success: '投稿が完了しました。'
+    else  
+      render :new
     end
   end
 
@@ -20,8 +22,11 @@ class PostsController < ApplicationController
 
   def update 
     @post = Post.find_by(id: params[:id])
-    @post.update(update_post_params)
-    redirect_to details_post_path, success: "編集が完了しました"
+    if @post.update(update_post_params)
+      redirect_to details_post_path, success: "編集が完了しました"
+    else
+      render :edit 
+    end
   end
 
   def destroy
