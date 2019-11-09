@@ -5,5 +5,12 @@
 .main-container
   .postted-lyric
     .postted-lyric__list
-      = render 'shared/list'
+      - if @posts.blank?
+        .info
+          .info__top 
+            投稿はありません
+          .info__top__bottom
+            ”投稿する”から投稿しましょう！
+      - else
+        = render 'shared/list'
 = render "shared/post-btn"
