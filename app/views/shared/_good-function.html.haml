@@ -1,10 +1,10 @@
-- if current_user.already_liked?(@post)
-  = button_to post_like_path(@post), class: "good-btn", method: :delete do
+- if Like.find_by(user_id: current_user.id, post_id: post.id)
+  = button_to post_like_path(post_id: @post.id, id: liked_user = current_user.id), class: "good-btn", method: :delete, remote: true do
     = fa_icon "heart"
     .good-counter
       = @post.likes.count
 - else
-  = button_to post_likes_path(@post), class: "good-btn" do
+  = button_to post_likes_path(@post.id), class: "good-btn", method: :post, remote: true do
     = fa_icon "heart"
     .good-counter
       = @post.likes.count

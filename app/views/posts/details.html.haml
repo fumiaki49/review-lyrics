@@ -54,8 +54,8 @@
               =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
         - else
           %ul.detail-page-buttons
-            %li.detail-page-buttons__btn
-              = render "shared/good-function"
+            %li.detail-page-buttons__btn{ id: "post_#{@post.id}" }
+              = render "shared/good-function", post: @post
             %li.detail-page-buttons__btn
               = link_to root_path do
                 =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
