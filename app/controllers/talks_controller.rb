@@ -3,8 +3,10 @@ class TalksController < ApplicationController
     @post = Post.find(params[:post_id])
     @talk = @post.talks.new(talk_params)
     @talk.user_id = current_user.id
-    if @talk.save
-      redirect_back(fallback_location: root_path)
+    @talk.save
+    respond_to do |format|
+      format.html {redirect_back(fallback_location: root_path)}
+      format.json
     end
   end
 
