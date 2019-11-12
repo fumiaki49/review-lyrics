@@ -23,4 +23,5 @@
 
       %button.default-btn{type: "submit"} 投稿する
       %br/
-      =button_to "キャンセル", "#",class: "default-btn", onclick: "history.back(); return false;"
+      = link_to :back do
+        %button.default-btn キャンセル
