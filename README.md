@@ -31,3 +31,13 @@
 ### Association
 - belongs_to: users
 - belongs_to: posts
+
+## likesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|post_id|bigint|foreign_key::true|
+|user_id|bigint|foreign_key::true|
+
+### Association
+- belongs_to: users
+- belongs_to: posts
