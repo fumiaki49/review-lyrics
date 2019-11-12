@@ -23,6 +23,7 @@
       .button-field
         %button.edit-page-btn{type: "submit"} 変更する
     
-        =button_to "キャンセル", "#",class: "edit-page-btn", onclick: "history.back(); return false;"
+        = link_to details_post_path(@post.id) do
+          %button.edit-page-btn キャンセル
 
         #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "edit-page-btn"}
