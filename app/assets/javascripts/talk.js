@@ -31,11 +31,16 @@ $(function(){
       var html = buildHTML(data);
       $('.talks-container__show').append(html);
       $('.input-default').val('');
-      $('.send-btn').prop('disabled', false);
+      $('.talks-container__show').animate({scrollTop: $(document).height()}),1500;
+
     })
 
     .fail (function(){
       alert('送信に失敗しました。');
+    })
+
+    .always (function(){
+      $('.send-btn').prop('disabled', false);
     })
   })
 })
