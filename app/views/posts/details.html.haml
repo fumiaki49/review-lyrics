@@ -52,13 +52,15 @@
               = link_to edit_post_path do
                 %button.detail-page-btn 編集
             %li.detail-page-buttons__btn
-              =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
+              = link_to :back do
+                %button.detail-page-btn 戻る
+
         - else
           %ul.detail-page-buttons
             %li.detail-page-buttons__btn{ id: "post_#{@post.id}" }
               = render "shared/good-function", post: @post
             %li.detail-page-buttons__btn
-              = link_to root_path do
-                =button_to "戻る", "#",class: "detail-page-btn", onclick: "history.back(); return false;"
+              = link_to :back do
+                %button.detail-page-btn 戻る
       
 
