@@ -19,5 +19,5 @@
       = p.liked_users.count
             
 
-    = link_to details_post_path(p.id) do
+    = link_to details_post_path(p.id), data: { turbolinks: false } do
       %button.details-btn 詳細
