@@ -26,4 +26,5 @@
         = link_to details_post_path(@post.id) do
           %button.edit-page-btn キャンセル
 
-        #{button_to "削除", post_path(@post), data: { confirm: "本当によろしいですか？" }, method: :delete, class: "edit-page-btn"}
+        = link_to post_path(@post), method: :delete, data: { confirm: "本当によろしいですか？"} do
+          %button.edit-page-btn 削除
