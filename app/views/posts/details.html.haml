@@ -48,19 +48,14 @@
       .postted-under__label
         - if user_signed_in? && @post.user_id == current_user.id 
           %ul.detail-page-buttons
+            %li.detail-page-buttons__btn{ id: "post_#{@post.id}" }
+              = render "shared/good-function", post: @post  
             %li.detail-page-buttons__btn
               = link_to edit_post_path do
                 %button.detail-page-btn 編集
-            %li.detail-page-buttons__btn
-              = link_to :back do
-                %button.detail-page-btn 戻る
-
+    
         - else
           %ul.detail-page-buttons
             %li.detail-page-buttons__btn{ id: "post_#{@post.id}" }
-              = render "shared/good-function", post: @post
-            %li.detail-page-buttons__btn
-              = link_to :back do
-                %button.detail-page-btn 戻る
-      
+              = render "shared/good-function", post: @post      
 

@@ -3,8 +3,9 @@
   color: white;
   text-align: center;
   font-size: 30px;
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
 }
 
 .created-date {
@@ -15,7 +16,7 @@
 }
 .details-main {
   background-color: $thin-blaun;
-  height: 120%;
+  height: 160%;
   width: 100%;
 }
 
@@ -55,7 +56,8 @@
   &__label {
     list-style: none;
     display: inline-flex;
-    width: 600px;
+    width: 100%;
+    float: left;
     & li {
       margin-right: 19px;
     }
@@ -121,7 +123,6 @@
 
 .detail-page-buttons {
   list-style: none;
-  position: absolute;
-  top: 950px;
-  left: 1250px;
+  padding-left: 115px;
+  display: inline-flex;
 }
