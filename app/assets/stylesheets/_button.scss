@@ -1,16 +1,3 @@
-// .delete-btn {
-//   width: 300px;
-//   height: 35px;
-//   background-color: rgb(83, 221, 168);
-//   border-color: rgb(83, 221, 168);
-//   cursor: pointer;
-//   margin-top: 25px;
-//   border-radius: 1em;
-//   color: white;
-//   margin-bottom: 20px;
-//   box-shadow: 2px 3px 3px #225529;
-// }
-
 .default-btn {
   width: 300px;
   height: 35px;
@@ -23,18 +10,6 @@
   box-shadow: 2px 3px 3px $blaun;
 }
 
-.default-btn__side {
-  width: 250px;
-  height: 35px;
-  background-color: rgb(83, 221, 168);
-  border-color: rgb(83, 221, 168);
-  cursor: pointer;
-  margin-left: 20px;
-  margin-top: 25px;
-  border-radius: 1em;
-  box-shadow: 2px 3px 3px #225529;
-  color: white;
-}
 
 .post-btn {
   font-size: 23px;
@@ -84,20 +59,6 @@
   margin-right: 20px;
 }
 
-.details-page_back-btn {
-  width: 300px;
-  height: 35px;
-  background-color: $blaun;
-  border-color: $blaun;
-  cursor: pointer;
-  border-radius: 1em;
-  color: white;
-  box-shadow: 2px 3px 3px $blaun;
-  position: absolute;
-  top: 1125px;
-  left: 570px;
-}
-
 .send-btn {
   width: 55px;
   height: 40px;
@@ -132,3 +93,9 @@
   width: 70px;
   padding-top: 3px;
 }
+
+.mypage-btn:hover,.default-btn:hover,.good-btn:hover,.detail-page-btn:hover,.edit-page-btn:hover,.send-btn:hover,.details-btn:hover {
+  background-color: orange;
+  border-color: orange;
+}
+
