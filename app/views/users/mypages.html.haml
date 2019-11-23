@@ -11,7 +11,10 @@
     %ul.mypage-main__list
       %li.users-postted 
         =link_to my_post_user_path(current_user) do
-          %button.mypage-btn 投稿した歌詞
+          %button.mypage-btn 
+            投稿した
+            %br/
+            歌詞
       %li.users-favorit 
         =link_to my_favorit_user_path(current_user) do
           %button.mypage-btn お気に入り

@@ -45,6 +45,7 @@
   margin-top: 25px;
   color: white;
   box-shadow: 2px 3px 3px $blaun;
+  border-radius: 1em;
 }
 
 .edit-page-btn {
@@ -57,6 +58,7 @@
   color: white;
   box-shadow: 2px 3px 3px $blaun;
   margin-right: 20px;
+  border-radius: 1em;
 }
 
 .send-btn {
@@ -78,6 +80,7 @@
   color: white;
   box-shadow: 2px 3px 3px $blaun;
   display: inline-flex;
+  border-radius: 1em;
   & i , .good-counter{
     line-height: 70px;
     padding-left: 10px;

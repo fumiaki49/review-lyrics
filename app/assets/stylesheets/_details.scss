@@ -9,11 +9,12 @@
 }
 
 .created-date {
-  font-size: 15px;
-  color: white;
-  width: 155px;
-  padding: 10px 0 0 10px;
+  font-size: 20px;
+  color: black;
+  padding: 30px 120px 0 0;
+  float: right;
 }
+
 .details-main {
   background-color: $thin-blaun;
   height: 160%;
@@ -23,29 +24,29 @@
 .postted-details {
   height: 100%;
   width: 1050px;
+  padding-top: 60px;
   margin: 0 auto;
   text-align: center;
   background-color: $soft-blaun;
   &__info {
-    color: white;
-    padding-top: 20px;
+    color: wheat;
     margin: 0 auto;
-    width: 300px;
+    width: 800px;
+    border: solid 1px wheat;
     &__title {
-      padding-top: 20px;
-      padding-bottom: 10px;
       font-size: 20px;
-      display: block;
-      color: $blaun;
+      font-weight: normal;
+      width: 120px;
+      border: solid 1px wheat;
+      color: white;
+      background-color: $blaun;
       &__details {
         font-size: 15px;
-        padding-top: 10px;
-        display: block;
-        border-top: dashed 1px white;
-        width: 700px;
-        &__text {
-          text-align: left;
-        } 
+        text-align: left;
+        color: white;
+        border: solid 1px wheat;
+        padding: 10px 0 10px 10px;
+        background-color: rgba(243, 180, 129, 0.959);
       }
     }
   }

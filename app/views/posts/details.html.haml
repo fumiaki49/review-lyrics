@@ -6,27 +6,22 @@
     さんの投稿
 .details-main
   .postted-details
-    .created-date
-      %small= @post.created_at.strftime('%Y/%m/%d %H:%M')
-      %small の投稿
-
     %table.postted-details__info
-      %th.postted-details__info__title Song
-      %td.postted-details__info__title__details
-        = @post.song
-
-      %th.postted-details__info__title Singer
-      %td.postted-details__info__title__details
-        = @post.singer
-
-      %th.postted-details__info__title Lyric
-      %td.postted-details__info__title__details
-        .postted-details__info__title__details__text
+      %tr 
+        %th.postted-details__info__title Song
+        %td.postted-details__info__title__details
+          = @post.song
+      %tr 
+        %th.postted-details__info__title Singer
+        %td.postted-details__info__title__details
+          = @post.singer
+      %tr 
+        %th.postted-details__info__title Lyric
+        %td.postted-details__info__title__details
           = @post.lyric
-
-      %th.postted-details__info__title Comment
-      %td.postted-details__info__title__details
-        .postted-details__info__title__details__text
+      %tr 
+        %th.postted-details__info__title Comment
+        %td.postted-details__info__title__details
           = @post.comment
 
     .talks-container
@@ -57,5 +52,9 @@
         - else
           %ul.detail-page-buttons
             %li.detail-page-buttons__btn{ id: "post_#{@post.id}" }
-              = render "shared/good-function", post: @post      
+              = render "shared/good-function", post: @post  
+
+    .created-date
+      %small= @post.created_at.strftime('%Y/%m/%d %H:%M')
+      %small の投稿
 

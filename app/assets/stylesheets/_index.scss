@@ -1,15 +1,15 @@
 .all-lyric {
-background-color: $thin-blaun;
-  color: $deep-blue;
+  background-color: $thin-blaun;
   font-size: 33px;
   position: absolute;
-  top: 99px;
-  left: 33px;
+  top: 90px;
+  left: 20px;
   &__tag {
     background-color: $blaun;
     color: white;
-    width: 40px;
-    height: 333px;
+    width: 130px;
+    padding: 10px 0 10px 15px;
+    border-radius: 10px;
   }
 }
 .main-container {
@@ -46,14 +46,14 @@ background-color: $thin-blaun;
       display: flex;
       padding-left: 0px;
       overflow: hidden;
-
+      border-radius: 15px;
       &__song {
         padding-left: 20px;
         padding-top: 8px;
         width: 743px;
         border-right: dashed 1px rgb(109, 106, 106);
         &__lyric {
-          width: 679px;
+          width: 720px;
           margin-top: 10px;
           padding-top: 10px;
           padding-left: 0;
@@ -87,10 +87,13 @@ background-color: $thin-blaun;
 .good-count {
   width: 80px;
   height: 90px;
-  margin-left: 10px;
-  line-height: 90px;
+  margin-left: 15px;
+  line-height: 113px;
   font-size: 20px;
   color: red;
+  & i {
+    padding-right: 10px;
+  }
 }
 
 .details-btn {
