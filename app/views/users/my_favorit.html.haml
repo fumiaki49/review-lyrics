@@ -26,6 +26,6 @@
             = l.liked_users.count
                   
 
-          = link_to details_post_path(l.id) do
+          = link_to details_post_path(l.id), data: { turbolinks: false } do
             %button.details-btn 詳細
 = render "shared/post-btn"
