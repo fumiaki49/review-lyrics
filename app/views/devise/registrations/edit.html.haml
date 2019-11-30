@@ -32,8 +32,6 @@
         = f.password_field :password_confirmation, autocomplete: "new-password", required: ""
 
       .field
-        = f.label "現在のパスワード"
-        %br/
         .field__check-user 本人であることを確認するため、現在のパスワードを入力してください。
         = f.password_field :current_password, autocomplete: "current-password", required: "", placeholder: "現在のパスワード"
 
