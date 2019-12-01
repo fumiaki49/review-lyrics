@@ -1,0 +1,132 @@
+@media screen and (max-width: 480px) {
+
+  // ログイン画面
+  .log-in-field {
+    width: 100%;
+  }
+  // 新規登録画面
+  .sign-up-field {
+    width: 100%;
+  }
+  // トップページ
+  .all-lyric {
+    position: unset;
+    width: 100%;
+    font-size: 25px;
+    &__tag {
+      width: 160px;
+      margin: 0 auto;
+      background-color: unset;
+      color: $blaun;
+    }
+  }
+
+  .postted-lyric__list {
+    width: 100%;
+    &__label {
+      width: 100%;
+      &__song {
+        width: 350px;
+        overflow: scroll;
+      }
+    }
+  }
+
+  .good-count {
+    display: none;
+  }
+
+  .text-xs-center {
+    padding-left: 35%;
+  }
+  // 詳細ページ
+  .postted-details {
+    width: auto;
+  }
+  .postted-details__info {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .talks-container {
+    width: 100%;
+  }
+
+  .input-default {
+    width: 88%;
+  }
+  .edit-user-field {
+    width: 100%;
+  }
+  .detail-page-buttons  {
+    padding: unset;
+  }
+  .created-date {
+    padding: 90px 155px 0 0;
+  }
+
+  // 編集ベージ
+  .post-field {
+    width: 100%;
+  }
+  .field-post__input {
+    width: 400px;
+    &__text {
+      width: 400px;
+    }
+  }
+
+  .delete-field__text__btn {
+    padding-left: 90px;
+  }
+  // 自分の投稿
+  .list-post {
+    position: unset;
+    &__tag {
+      width: 290px;
+      margin: 0 auto;
+      font-size: 30px;
+      background-color: unset;
+      color: $blaun;
+    }
+  }
+
+  // お気に入り
+  .list-favorit {
+    position: unset;
+    &__tag {
+      width: 250px;
+      margin: 0 auto;
+      font-size: 30px;
+      background-color: unset;
+      color: $blaun;
+
+    }
+  }
+  // マイページ
+  .mypage-main {
+    padding-top: unset;
+  }
+  .mypage-main__list {
+    display: block;
+  }
+  .mypage-main__list li {
+    width: auto;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  .mypage-btn {
+    width: 250px;
+    height: 75px;
+  }
+
+  .mypage-icon {
+    width: 160px;
+    height: 160px;
+  }
+  .mypage-container__user-info__name {
+    padding-top: 135px;
+  }
+}
