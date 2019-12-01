@@ -9,6 +9,14 @@
     width: 100%;
   }
   // トップページ
+  .info {
+    padding: unset;
+    text-align: center;
+    font-size: 30px;
+    &__top {
+      padding: unset;
+    }
+  }
   .all-lyric {
     position: unset;
     width: 100%;
@@ -78,7 +86,12 @@
   }
 
   .delete-field__text__btn {
-    padding-left: 90px;
+    margin: 0 auto;
+    padding: unset;
+  }
+
+  .button_to {
+    width: unset;
   }
   // 自分の投稿
   .list-post {
