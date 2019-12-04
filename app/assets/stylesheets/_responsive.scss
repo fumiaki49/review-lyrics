@@ -1,5 +1,7 @@
 @media screen and (max-width: 480px) {
-
+  html, body {
+    background-color: #e0d4c4;
+  }
   // ログイン画面
   .log-in-field {
     width: 100%;
@@ -86,9 +88,9 @@
     width: 100%;
   }
   .field-post__input {
-    width: 400px;
+    width: 90%;
     &__text {
-      width: 400px;
+      width: 90%;
     }
   }
 
