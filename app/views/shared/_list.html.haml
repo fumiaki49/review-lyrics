@@ -6,18 +6,16 @@
       %li.user-icon__name
         = p.user.nickname
     .postted-lyric__list__label__song
-      %label.show-title Song:
-      = p.song
-      %br/
-      %ul.postted-lyric__list__label__song__lyric
-        %li.show-lyric 
-          Lyric:
-        %li
-          = p.lyric
+      = link_to details_post_path(p.id), data: { turbolinks: false } do
+        %label.show-title Song:
+        = p.song
+        %br/
+        %ul.postted-lyric__list__label__song__lyric
+          %li.show-lyric 
+            Lyric:
+          %li
+            = p.lyric
+            
     .good-count
       = fa_icon "heart"
       = p.liked_users.count
-            
-
-    = link_to details_post_path(p.id), data: { turbolinks: false } do
-      %button.details-btn 詳細

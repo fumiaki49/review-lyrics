@@ -39,8 +39,10 @@
     background-color: #e0c5a5;
     &__label {
       list-style: none;
-      width: 999px;
+      width: 93%;
       height: 113px;
+      margin: 0 auto;
+      margin-bottom: 20px;
       background-color: white;
       color: rgb(109, 106, 106);
       display: flex;
@@ -75,8 +77,9 @@
 .show-lyric {
   padding-right: 13px;
 }
+
 .user-icon {
-  width: 83px;
+  width: 90px;
   height: 113px;
   text-align: center;
   padding: 5px 5px;
@@ -110,6 +113,6 @@
 }
 
 
-nav {
+.text-xs-center {
   padding-left: 40%;
 }
